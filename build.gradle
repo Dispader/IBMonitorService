@@ -50,3 +50,8 @@ task jarJaxbJava(dependsOn:compileJaxb, type: Jar){
     from('build/generated/jaxb/java/configType')
     destinationDir = file('src/main/resources')
 }
+
+tasks.withType(Test) {
+    testLogging.exceptionFormat = 'full'
+}
+
